@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ShoppingCart, ArrowRight, Leaf, Sparkles, Heart, Star, PawPrint } from "lucide-react";
 import dogImg from "@/assets/happy-dog.jpg";
+import productImg from "@/assets/imagen_producto.png";
 
 export function Hero() {
   return (
@@ -90,7 +91,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* product card */}
+        {/* product image */}
         <div className="lg:col-span-5 flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.9, rotate: -3 }}
@@ -101,25 +102,11 @@ export function Hero() {
             <div className="absolute -top-6 -right-6 z-20 flex h-24 w-24 items-center justify-center rounded-full bg-ink text-cream text-xs font-bold text-center leading-tight shadow-xl">
               100%<br />Natural
             </div>
-
-            <div className="rounded-[2rem] border-2 border-cream/40 bg-primary p-6 shadow-2xl">
-              <div className="rounded-2xl bg-cream/10 p-6 text-center">
-                <div className="font-display font-black text-cream text-3xl leading-none">
-                  PURA<br />PATA
-                </div>
-                <ArrowRight className="mx-auto my-4 h-6 w-6 -rotate-45 text-cream" />
-              </div>
-              <div className="mt-4 text-center">
-                <p className="font-display font-bold text-cream text-lg uppercase tracking-wide">
-                  Patas de pollo<br />deshidratadas
-                </p>
-                <div className="mt-3 flex justify-center gap-2">
-                  <span className="rounded-full bg-ink px-3 py-1 text-xs font-semibold text-cream">CRUNCH</span>
-                  <span className="rounded-full bg-ink px-3 py-1 text-xs font-semibold text-cream">SALUDABLE</span>
-                </div>
-              </div>
-            </div>
-
+            <img
+              src={productImg}
+              alt="Patas de pollo deshidratadas Pura Pata"
+              className="w-full drop-shadow-2xl"
+            />
             <div className="absolute -bottom-4 -right-4 z-20 rounded-2xl bg-cream px-4 py-3 text-ink shadow-xl">
               <p className="text-[10px] font-semibold uppercase tracking-wider text-primary">Ideal para</p>
               <p className="text-sm font-bold">todos los perros</p>
