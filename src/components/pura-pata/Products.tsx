@@ -1,10 +1,7 @@
 import { ShoppingCart, Star, ArrowRight } from "lucide-react";
 
 const products = [
-  { tag: "Más vendido", icon: "🐔", size: "100g", price: "$8.990", rating: 5, desc: "Crujientes y nutritivas. Perfectas como premio diario." },
-  { tag: "Mejor valor", icon: "🦴", size: "250g", price: "$18.990", rating: 5, desc: "El tamaño ideal para perros medianos y grandes." },
-  { tag: "Pack familia", icon: "🐾", size: "500g", price: "$32.990", rating: 5, desc: "Para los que quieren consentir a sus perritos todo el mes." },
-  { tag: "Nuevo", icon: "⭐", size: "3 x 50g", price: "$12.990", rating: 4, desc: "Pack degustación. Ideal para conocer el producto. ¡Pruébalas!" },
+  { tag: "Más vendido", icon: "🐔", size: "15 piezas", price: "$120", rating: 5, desc: "Crujientes y nutritivas. Perfectas como premio diario." },
 ];
 
 export function Products() {
@@ -46,7 +43,7 @@ export function Products() {
                   ))}
                 </div>
                 <h3 className="mt-3 font-display font-bold text-xl text-ink leading-tight">
-                  Patas de Pollo Deshidratadas
+                  Patas Deshidratadas
                 </h3>
                 <p className="mt-1 text-sm font-bold text-primary">{p.size}</p>
                 <p className="mt-3 text-sm text-ink/70 flex-1">{p.desc}</p>
