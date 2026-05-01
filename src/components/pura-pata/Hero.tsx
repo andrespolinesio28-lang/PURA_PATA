@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ShoppingCart, ArrowRight, Leaf, Sparkles, Heart, Star, PawPrint } from "lucide-react";
 import dogImg from "@/assets/happy-dog.jpg";
-import productImg from "@/assets/imagen_producto.png";
+import productImg from "@/assets/perro_producto.png";
 
 export function Hero() {
   return (
