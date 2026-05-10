@@ -19,10 +19,9 @@ export function Contact() {
               </p>
 
               <div className="mt-8 space-y-4">
-                <ContactItem icon={<Mail className="h-5 w-5" />} label="hola@purapata.cl" />
-                <ContactItem icon={<MessageCircle className="h-5 w-5" />} label="+56 9 1234 5678" />
-                <ContactItem icon={<Instagram className="h-5 w-5" />} label="@purapata.snacks" />
-                <ContactItem icon={<MapPin className="h-5 w-5" />} label="Santiago, Chile" />
+                <ContactItem icon={<Mail className="h-5 w-5" />} label="contacto@purapata.mx" />
+                <ContactItem icon={<MessageCircle className="h-5 w-5" />} label="55 4959 8337" />
+                <ContactItem icon={<Instagram className="h-5 w-5" />} label="@purapata.mx" />
               </div>
             </div>
 

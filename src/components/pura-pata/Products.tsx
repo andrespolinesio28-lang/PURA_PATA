@@ -1,8 +1,12 @@
 import { Star, ArrowRight } from "lucide-react";
 import { useEffect } from "react";
+import productImg from "@/assets/pro2.png";
 
 export function Products() {
   useEffect(() => {
+    // Evitar duplicados
+    if (document.getElementById('shopify-buy-script')) return;
+
     const scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
 
     function ShopifyBuyInit() {
@@ -122,6 +126,7 @@ export function Products() {
         ShopifyBuyInit();
       } else {
         const script = document.createElement('script');
+        script.id = 'shopify-buy-script';
         script.async = true;
         script.src = scriptURL;
         script.onload = ShopifyBuyInit;
@@ -129,6 +134,7 @@ export function Products() {
       }
     } else {
       const script = document.createElement('script');
+      script.id = 'shopify-buy-script';
       script.async = true;
       script.src = scriptURL;
       script.onload = ShopifyBuyInit;
@@ -147,23 +153,21 @@ export function Products() {
             <span className="text-primary">snacks</span>
           </h2>
           <p className="mt-5 text-ink/70">
-            Todos nuestros productos son elaborados con pollo 100% natural, sin aditivos ni conservantes.
+            Devuélveles el amor que te dan.
           </p>
         </div>
 
         <div className="mt-14 flex justify-center">
           <article className="group flex flex-col rounded-3xl bg-cream shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] overflow-hidden border border-border hover:shadow-[0_20px_50px_-15px_rgba(232,92,13,0.35)] transition-all max-w-sm w-full">
-            <div className="relative bg-primary p-6 pb-10">
+            <div className="relative bg-primary p-6">
               <span className="absolute top-4 left-4 z-10 rounded-full bg-ink px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-cream">
                 Más vendido
               </span>
-              <div className="mt-8 mx-auto rounded-2xl bg-orange-2/60 border-2 border-cream/40 p-5 text-center">
-                <div className="font-display font-black text-cream text-xl leading-none">PURA<br />PATA</div>
-                <p className="mt-3 text-[10px] font-bold uppercase tracking-wide text-cream">
-                  Patas de pollo<br />deshidratadas
-                </p>
-                <div className="mt-3 text-3xl">🐔</div>
-              </div>
+              <img
+                src={productImg}
+                alt="Patas de pollo deshidratadas Pura Pata"
+                className="w-full object-contain max-h-56 drop-shadow-xl mt-4"
+              />
             </div>
 
             <div className="flex-1 p-6 flex flex-col">
@@ -176,7 +180,7 @@ export function Products() {
                 Patas Deshidratadas
               </h3>
               <p className="mt-1 text-sm font-bold text-primary">15 piezas</p>
-              <p className="mt-3 text-sm text-ink/70 flex-1">Crujientes y nutritivas. Perfectas como premio diario.</p>
+              <p className="mt-3 text-sm text-ink/70 flex-1">Crujientes y nutritivas. Perfectas como premio diario y complemento alimenticio.</p>
               <p className="mt-3 font-display font-black text-2xl text-primary">$120</p>
 
               {/* Shopify Buy Button */}

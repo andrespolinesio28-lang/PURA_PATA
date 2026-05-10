@@ -1,5 +1,5 @@
 import { Heart, Truck } from "lucide-react";
-import dogImg from "@/assets/happy-dog.jpg";
+import dogImg from "@/assets/maty.jpeg";
 
 export function About() {
   return (

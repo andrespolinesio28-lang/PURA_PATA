@@ -45,7 +45,7 @@ export function Hero() {
             className="mt-6 max-w-xl text-lg text-cream/90"
           >
             Patas de pollo deshidratadas, hechas con cariño para tu perro. Sin
-            aditivos, sin conservantes — solo lo que tu mejor amigo necesita. <PawPrint className="inline h-5 w-5" />
+            aditivos, sin conservantes — solo lo que tu mejor amigo necesita.
           </motion.p>
 
           <motion.div
@@ -73,13 +73,10 @@ export function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Badge icon={<Leaf className="h-4 w-4" />} label="Pollo 100% Natural" />
             <Badge icon={<Sparkles className="h-4 w-4" />} label="Beneficios Dentales" />
-            <Badge icon={<Heart className="h-4 w-4 fill-current" />} label="Sin Conservantes" tone="dark" />
+            <Badge icon={<Heart className="h-4 w-4 fill-current" />} label="Sin Conservantes" />
           </div>
 
           <div className="mt-10 flex items-center gap-4">
-            <div className="flex -space-x-2 text-2xl">
-              <span>🐶</span><span>🐕</span><span>🐩</span>
-            </div>
             <div>
               <div className="flex gap-0.5 text-cream-soft">
                 {Array.from({ length: 5 }).map((_, i) => (
